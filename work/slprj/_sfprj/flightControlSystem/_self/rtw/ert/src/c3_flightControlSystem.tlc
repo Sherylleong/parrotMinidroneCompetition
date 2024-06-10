@@ -1,0 +1,97 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   11 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "actualturnangle"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "actualturnangle"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "debug1"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "debug1"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "xtemp"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "xtemp"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "ytemp"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "ytemp"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "turndir"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "turndir"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "startingyaw"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "startingyaw"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "remainingangle"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "remainingangle"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "landingy"\
+      Description  "ChartLocal"\
+      SFName       ""\
+      Path         "landingy"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_flightControlSystem"\
+      Description  "StateIsActive"\
+      SFName       "is_active_c3_flightControlSystem"\
+      Path         "is_active_c3_flightControlSystem"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+    ChartData {\
+      Name         "is_c3_flightControlSystem"\
+      Description  "StateActiveChild"\
+      SFName       "is_c3_flightControlSystem"\
+      Path         "is_c3_flightControlSystem"\
+      SrcLocation  ""\
+      IsTestPoint  1\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
